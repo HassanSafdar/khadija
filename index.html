@@ -1210,6 +1210,50 @@
 
             /* Rest of your existing responsive styles... */
         }
+
+
+
+
+         /* Add these styles to your existing CSS */
+
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        /* Optional: Add hover effect */
+        .activity-img img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* For image fallback if images don't load */
+        .activity-img {
+            position: relative;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        /* Add a placeholder text for images */
+        .activity-img::before {
+            content: "Image";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--primary-purple);
+            opacity: 0.3;
+            font-size: 0.9rem;
+            z-index: 1;
+        }
+
+        .activity-img img {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 
@@ -1681,13 +1725,18 @@
                 <h2>Extracurricular Activities</h2>
             </div>
             <div class="activity-grid">
+                <!-- Quiz Competition Activity -->
                 <div class="activity-item hidden">
                     <div class="activity-images">
                         <div class="activity-img">
-                            <i class="fas fa-question-circle"></i>
+                            <!-- Replace this with your quiz competition image -->
+                            <img src="./images/extra1.jpg" alt="Quiz Competition"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-users"></i>
+                            <!-- Replace this with your team photo -->
+                            <img src="./images/extra2.jpg" alt="Quiz Team"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                     </div>
                     <div class="activity-text">
@@ -1697,19 +1746,23 @@
                     </div>
                 </div>
 
+                <!-- Pink Ribbon Organization Activity -->
                 <div class="activity-item hidden">
                     <div class="activity-images">
                         <div class="activity-img">
-                            <i class="fas fa-ribbon"></i>
+                            <!-- Pink ribbon event image -->
+                            <img src="./images/extra3.jpg" alt="Pink Ribbon Event"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-paint-brush"></i>
+                            <!-- Poster competition image -->
+                            <img src="./images/extra4.jpg" alt="Poster Competition"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="activity-img">
-                            <i class="fas fa-heart"></i>
+                            <!-- Team/Group photo -->
+                            <img src="./images/extra5.jpg" alt="Team Photo"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                     </div>
                     <div class="activity-text">
@@ -1719,16 +1772,23 @@
                     </div>
                 </div>
 
+                <!-- Zoology Tour Activity -->
                 <div class="activity-item hidden">
                     <div class="activity-images">
                         <div class="activity-img">
-                            <i class="fas fa-university"></i>
+                            <!-- University tour image -->
+                            <img src="./images/extra6.jpg" alt="University Tour"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-microscope"></i>
+                            <!-- Lab/Microscope image -->
+                            <img src="./images/extra7.jpg" alt="Lab Visit"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-dna"></i>
+                            <!-- Specimen/Research image -->
+                            <img src="./images/extra8.jpg" alt="Specimen Study"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                     </div>
                     <div class="activity-text">
@@ -1738,19 +1798,28 @@
                     </div>
                 </div>
 
+                <!-- Other Activities -->
                 <div class="activity-item hidden">
                     <div class="activity-images">
                         <div class="activity-img">
-                            <i class="fas fa-graduation-cap"></i>
+                            <!-- Graduation day image -->
+                            <img src="./images/extra9.jpg" alt="Last Day of Bachelors"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-utensils"></i>
+                            <!-- Annual dinner image -->
+                            <img src="./images/extra10.jpg" alt="Annual Dinner"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-hiking"></i>
+                            <!-- Class outing image -->
+                            <img src="./images/extra11.jpg" alt="Class Outing"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                         <div class="activity-img">
-                            <i class="fas fa-smile"></i>
+                            <!-- Social events image -->
+                            <img src="./images/extra12.jpg" alt="Social Events"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         </div>
                     </div>
                     <div class="activity-text">
@@ -1761,8 +1830,16 @@
                 </div>
             </div>
         </div>
-    </section>
 
+
+
+
+        <!-- Example of clickable image with lightbox -->
+        <div class="activity-img">
+            <img src="./images/quiz1.jpg" alt="Quiz Competition" class="lightbox-trigger"
+                data-lightbox="extracurricular" data-title="Quiz Competition at International Poultry Expo">
+        </div>
+    </section>
     <!-- References -->
     <section id="references" style="background-color: #f5f1ff;">
         <div class="container">
@@ -2183,9 +2260,23 @@
                 }
             });
         }
+
+
+
+        // Add lightbox functionality for extracurricular images
+        document.querySelectorAll('.activity-img img').forEach(img => {
+            img.addEventListener('click', function () {
+                // Use your existing lightbox function
+                openLightbox(this.src);
+            });
+
+            // Add cursor pointer to indicate clickable
+            img.style.cursor = 'pointer';
+        });
     </script>
 </body>
 
 
 </html>
+
 
