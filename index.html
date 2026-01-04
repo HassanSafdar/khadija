@@ -231,6 +231,14 @@
             gap: 40px;
         }
 
+
+          @media (max-width: 600px) {
+            .about-content {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        
         .about-card {
             background-color: var(--white);
             border-radius: var(--border-radius);
@@ -1718,7 +1726,7 @@
         </div>
     </section>
 
-    <!-- Extracurricular Activities -->
+  <!-- Extracurricular Activities -->
     <section id="extracurricular">
         <div class="container">
             <div class="section-title">
@@ -1829,7 +1837,8 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
+
     </section>
     <!-- References -->
     <section id="references" style="background-color: #f5f1ff;">
@@ -2269,6 +2278,7 @@
 
 
 </html>
+
 
 
 
